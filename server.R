@@ -122,7 +122,7 @@ shinyServer(function(input, output) {
   
   output$heatmap <- renderImage({
     vc = input$slideHeatmap
-    filename <- normalizePath(file.path('../shinyHeatmaps',paste0('cutoff',vc, '.png')))
+    filename <- normalizePath(file.path('./shinyHeatmaps',paste0('cutoff',vc, '.png')))
     #filename <- normalizePath(file.path(paste0('cutoff',vc, '.png')))
     # Return a list containing the filename and alt text
     list(src = filename,

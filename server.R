@@ -96,7 +96,7 @@ shinyServer(function(input, output) {
     # variance
     tmp = vars[w]
     # data frame
-    df = data.frame(PROBE.SET=names(tmp),GENE.SYMBOL=gsymbols[w],VARIANCE=as.numeric(tmp),HIGH.in.LT=hiLT,PVAL=signif(pw,3))
+    df = data.frame(PROBE.SET=names(tmp),GENE.SYMBOL=gsymbols[w],VARIANCE=signif(as.numeric(tmp),3),HIGH.in.LT=hiLT,PVAL=signif(pw,3))
     # order according to variance
     ordx = order(df$VARIANCE,decreasing=T)
     df = df[ordx,]

@@ -132,7 +132,7 @@ shinyServer(function(input, output) {
   
   
   output$legend <- renderImage({
-    filename <- normalizePath(file.path('./',"legend_small.png"))
+    filename <- normalizePath(file.path('./',"outside_classes_legend_v2.png"))
     list(src = filename,
          width = 300,
          height=100,
